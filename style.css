@@ -9,13 +9,15 @@
 }
 
 :root {
-    --color-primary-red: #ed1f2b;
+    --color-primary-red: #800000;
     --color-primary-crimson: #A33B20;
     --color-primary-mustard: #FED766;
     
     --color-white: #fff;
     --color-dark-1: #333;
     --color-dark-2: #444;
+
+    --default-width-desktop: 80%;
 }
 
 html {
@@ -36,6 +38,11 @@ body {
     padding: 2rem 3rem;
 }
 
+/* HEADER */
+.header {
+
+}
+
 /* ABOUT */
 
 .section-about {
@@ -43,7 +50,7 @@ body {
 }
 
 .about {
-    width: 80%;
+    width: var(--default-width-desktop);
     margin: 0 auto;
     padding: 2rem;
     /* background-image: linear-gradient(to right bottom, rgba(254, 215, 102, .9), rgba(254, 215, 102, .9)); */
@@ -61,8 +68,47 @@ body {
     line-height: 1.4;
 }
 
-.header {
+/* CHAIRMAN */
+.chairman {
+    width: var(--default-width-desktop);
+    margin: 0 auto;
+}
 
+.chairman__info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.chairman__info img {
+    height: 8rem;
+    border-radius: 50%;
+    border: 3px solid var(--color-primary-mustard);
+}
+
+.chairman__info h4 {
+    font-size: 2rem;
+}
+
+.chairman__message {
+    margin-top: 3rem;
+    font-size: 18px;
+    background-color: var(--color-primary-mustard);
+    padding: 2rem;
+    border-radius: 20px;
+    position: relative;
+}
+
+.chairman__message::before {
+    content: "";
+    height: 40px;
+    width: 40px;
+    background-color: inherit;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 2rem;
+    top: -1rem;
+    z-index: -1;
 }
 
 /* UTILS */

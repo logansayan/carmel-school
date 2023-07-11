@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carmel Convent School | Faridabad</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="nav"></nav>
-    <header class="header"></header>
+    <header class="header">
+        <div class="splide__slider">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">Slide 01</li>
+                    <li class="splide__slide">Slide 02</li>
+                    <li class="splide__slide">Slide 03</li>
+                </ul>
+            </div>
+        </div>
+    </header>
     <section class="section section-about">
         <div class="about">
             <h3 class="about__heading primaryHeading">About, Carmel Convent School</h3>
@@ -24,7 +35,47 @@
                 <img src="/img/chairman.jpg" alt="Chairman">
                 <h4>Chairman's Message</h4>
             </div>
+            <p class="chairman__message">
+                Education leads to transformation. It transforms everything and everyone beyond one's imagination. If you want a change from the doom of darkness and if you are longing for a ray of light to shine upon you and your family then do nothing special but educate the other in your family, remind your child to dream and dream like Malala Yousafzai, the young inspiration of the present world who states in her book 'I am Malala': “Today I looked at myself in a mirror and thought for a second. Once I had asked God for one or two extra inches in height, but instead he made me as tall as the sky, so high that I could not measure myself. So I offered the hundred raakat nafl prayers that I had promise...
+            </p>
         </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <script>
+        var main = new Splide( '.splide__slider', {
+        type       : 'fade',
+        heightRatio: 0.5,
+        pagination : false,
+        arrows     : false,
+        cover      : true,
+        } );
+
+        var thumbnails = new Splide( '.thumbnail__slider', {
+            rewind          : true,
+            fixedWidth      : 104,
+            fixedHeight     : 58,
+            isNavigation    : true,
+            gap             : 10,
+            focus           : 'center',
+            pagination      : false,
+            cover           : true,
+            dragMinThreshold: {
+                mouse: 4,
+                touch: 10,
+            },
+            breakpoints : {
+                640: {
+                fixedWidth  : 66,
+                fixedHeight : 38,
+                },
+            },
+        });
+
+        main.sync( thumbnails );
+        main.mount();
+        thumbnails.mount();
+</script>
 </body>
 </html>
