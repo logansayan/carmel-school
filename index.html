@@ -9,17 +9,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="nav"></nav>
-    <header class="header">
-        <div class="splide__slider">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">Slide 01</li>
-                    <li class="splide__slide">Slide 02</li>
-                    <li class="splide__slide">Slide 03</li>
-                </ul>
+    <section class="section section-brand">
+        <div class="brand">
+            <img src="img/logo.png" alt="Logo" class="brand__logo">
+            <div class="brand__text">
+                <h1>Carmel Convent School</h1>
+                <p>Affiliated to CBSE New Delhi</p>
             </div>
         </div>
+    </section>
+    <nav class="nav">
+        <ul class="nav__links">
+            <li class="nav__item"><a class="nav__link" href="">Home</a></li>
+            <li class="nav__item"><a class="nav__link" href="">School <i class="fa-solid fa-chevron-down"></i></a></li>
+            <li class="nav__item"><a class="nav__link" href="">Mandatory Public Disclosure <i class="fa-solid fa-chevron-down"></i></a></li>
+            <li class="nav__item"><a class="nav__link" href="">Academic <i class="fa-solid fa-chevron-down"></i></a></li>
+            <li class="nav__item"><a class="nav__link" href="">Rules <i class="fa-solid fa-chevron-down"></i></a></li>
+            <li class="nav__item"><a class="nav__link" href="">Infrastructure <i class="fa-solid fa-chevron-down"></i></a></li>
+            <li class="nav__item"><a class="nav__link" href="">Gallery</a></li>
+            <li class="nav__item"><a class="nav__link" href="">Contact Us</a></li>
+        </ul>
+    </nav>
+    <header class="header">
+        <section class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide">
+                        <img src="/img/header/1.jpg">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="/img/header/2.jpg">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="/img/header/3.jpg">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="/img/header/4.jpg">
+                      </li>
+                  </ul>
+            </div>
+        </section>
     </header>
     <section class="section section-about">
         <div class="about">
@@ -65,7 +94,7 @@
                     <p class="facilities__paragraph">The skill attained during this lab will allow students to become familiar with equipments.</p>
                 </div>
                 <div class="facilities__item">
-                    <i class="fa-solid fa-peace facilities__icon"></i>
+                    <i class="fa-solid fa-cubes facilities__icon"></i>
                     <h4 class="facilities__name">Physics Lab</h4>
                     <p class="facilities__paragraph">Our physics laboratory is equipped with modern equipments to help the students learn and experiments.</p>
                 </div>
@@ -83,41 +112,107 @@
         </div>
     </section>
 
+    <section class="section section-recent">
+        <div class="recent">
+            <h2 class="recent__heading primaryHeading">Our Special Moments</h2>
+            <div class="recent__content">
+                <ul class="recent__items">
+                    <li class="recent__item" data-pos="-2">
+                        <img class="recent__img" src="img/events/1.jpg" alt="Recent Event" />
+                        <div class="recent__info">
+                            <h3>74th Independence Day</h3>
+                            <p>5 Photos</p>
+                        </div>
+                    </li>
+                    <li class="recent__item" data-pos="-1">
+                        <img class="recent__img" src="img/events/2.jpg" alt="Recent Event" />
+                        <div class="recent__info">
+                            <h3>TRADE FAIR 2019</h3>
+                            <p>19 Photos</p>
+                        </div>
+                    </li>
+                    <li class="recent__item" data-pos="0">
+                        <img class="recent__img" src="img/events/3.jpg" alt="Recent Event" />
+                        <div class="recent__info">
+                            <h3>SCI FEST 2019</h3>
+                            <p>3 Photos</p>
+                        </div>
+                    </li>
+                    <li class="recent__item" data-pos="1">
+                        <img class="recent__img" src="img/events/4.jpg" alt="Recent Event" />
+                        <div class="recent__info">
+                            <h3>39TH ANNUAL DAY</h3>
+                            <p>15 Photos</p>
+                        </div>
+                    </li>
+                    <li class="recent__item" data-pos="2">
+                        <img class="recent__img" src="img/events/5.jpg" alt="Recent Event" />
+                        <div class="recent__info">
+                            <h3>FIRE MOCK DRILL</h3>
+                            <p>12 Photos</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__group">
+            <h3><i class="fa-solid fa-paperclip"></i> Quick Links</h3>
+            <ul>
+                <li><a href="">Portal Help</a></li>
+                <li><a href="">ERP Software</a></li>
+                <li><a href="">Parent's Meeting</a></li>
+                <li><a href="">Infrastructure</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__group">
+            <h3><i class="fa-solid fa-tty"></i> Contact</h3>
+            <ul>
+                <li>Block D, Sector 7, Faridabad, Haryana - 121006</li>
+                <li>0129-2243344</li>
+                <li>carmelconvent_2004@yahoo.co.in</li>
+            </ul>
+        </div>
+
+        <div class="footer__apps">
+            <a class="footer__app" href="">
+                <p><i class="fa-brands fa-android"></i> Get App On</p>
+                <h2>Android</h2>
+            </a>
+    
+            <a class="footer__app" href="">
+                <p><i class="fa-brands fa-apple"></i> Get App On</p>
+                <h2>IOS</h2>
+            </a>
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        <p class="copyright__text">&copy; Copyright Carmel Convent Faridabad 2023 | All Rights Reserved</p>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
     <script>
-        var main = new Splide( '.splide__slider', {
-        type       : 'fade',
-        heightRatio: 0.5,
-        pagination : false,
-        arrows     : false,
-        cover      : true,
-        } );
-
-        var thumbnails = new Splide( '.thumbnail__slider', {
-            rewind          : true,
-            fixedWidth      : 104,
-            fixedHeight     : 58,
-            isNavigation    : true,
-            gap             : 10,
-            focus           : 'center',
-            pagination      : false,
-            cover           : true,
-            dragMinThreshold: {
-                mouse: 4,
-                touch: 10,
-            },
-            breakpoints : {
-                640: {
-                fixedWidth  : 66,
-                fixedHeight : 38,
-                },
-            },
+        var splide = new Splide( '.splide', {
+            direction: 'ttb',
+            height: "90vh",
+            autoplay: true,
+            // wheel: true,
+            // pagination: false,
+            paginationDirection: "ttb",
+            releaseWheel: true,
+            arrows: true,
+            omitEnd: true,
         });
 
-        main.sync( thumbnails );
-        main.mount();
-        thumbnails.mount();
-</script>
+        splide.mount();
+    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
