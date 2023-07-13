@@ -1,3 +1,18 @@
+// MOBILE NAV
+const closeBtn = document.querySelector(".mobile-nav__close")
+const openBtn = document.querySelector("#mobile-nav__open")
+const mobileNav = document.querySelector(".mobile-nav__links")
+const overlay = document.querySelector(".overlay-dark")
+
+closeBtn.addEventListener("click", function () {
+  mobileNav.style.transform = "scaleX(0)"
+  openBtn.checked = false
+})
+
+overlay.addEventListener("click", function () {
+  openBtn.checked = false
+})
+
 // RECENT
 
 // ITEMS SCROLL
