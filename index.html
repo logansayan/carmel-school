@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carmel Convent School | Faridabad</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-sea-green.min.css"> -->
     <script src="https://kit.fontawesome.com/83ef5b7ffb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,11 +14,12 @@
         <div class="brand">
             <img src="img/logo.png" alt="Logo" class="brand__logo">
             <div class="brand__text">
-                <h1>Carmel Convent School</h1>
+                <h1>Carmel Convent School, Faridabad</h1>
                 <p>Affiliated to CBSE New Delhi</p>
             </div>
         </div>
     </section>
+
     <nav class="nav">
         <ul class="nav__links">
             <li class="nav__item"><a class="nav__link" href="">Home</a></li>
@@ -30,6 +32,7 @@
             <li class="nav__item"><a class="nav__link" href="">Contact Us</a></li>
         </ul>
     </nav>
+
     <nav class="mobile-nav">
         <label for="mobile-nav__open"><i class="fa-solid fa-bars-staggered"></i></label>
         <input type="checkbox" id="mobile-nav__open">
@@ -47,8 +50,15 @@
             <p class="mobile-nav__copyright">&copy; All Rights Reserved</p>
         </ul>
     </nav>
+
     <header class="header">
-        <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__expand--img"></div>
+            <button class="splide__expand"><i class="fa-solid fa-expand"></i></button>
+            <div class="splide__buttons">
+                <button class="splide__prev"><i class="fa-solid fa-caret-up"></i></button>
+                <button class="splide__next"><i class="fa-solid fa-caret-down"></i></button>
+            </div>
             <div class="splide__track">
                   <ul class="splide__list">
                       <li class="splide__slide">
@@ -65,8 +75,9 @@
                       </li>
                   </ul>
             </div>
-        </section>
+        </div>
     </header>
+
     <section class="section section-about">
         <div class="about">
             <h3 class="about__heading primaryHeading">About, Carmel Convent School</h3>
@@ -221,13 +232,45 @@
             autoplay: true,
             // wheel: true,
             // pagination: false,
+            breakpoints: {
+                768: {
+                    height: "40vh"
+                }
+            },
             paginationDirection: "ttb",
             releaseWheel: true,
-            arrows: true,
+            arrows: false,
             omitEnd: true,
+            drag: false,
         });
 
         splide.mount();
+
+        let splidePrevBtn = document.querySelector(".splide__prev")
+        let splideNextBtn = document.querySelector(".splide__next")
+
+        splideNextBtn.addEventListener('click', e => {
+            splide.go('+1')
+        })
+
+        splidePrevBtn.addEventListener('click', e => {
+            splide.go('-1')
+        })
+
+        let splideExpand = document.querySelector(".splide__expand")
+        let splideExpandImg = document.querySelector(".splide__expand--img")
+
+        splideExpand.addEventListener("click", function () {
+            let currentImgSrc = document.querySelector(".is-active > img").src
+            console.log(currentImgSrc)
+            splideExpandImg.innerHTML = `<img src="${currentImgSrc}" />`
+            splideExpandImg.style.display = "block";
+        })
+
+        splideExpandImg.addEventListener("click", function () {
+            this.style.display = "none"
+        })
+
     </script>
 
     <script src="script.js"></script>
