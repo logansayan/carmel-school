@@ -667,6 +667,12 @@ label[for="mobile-nav__open"]:hover {
     }
 }
 
+@media (max-width: 600px) {
+    .brand {
+        flex-direction: column;
+    }
+}
+
 /* UTILS */
 
 .primaryHeading {
